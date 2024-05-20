@@ -1,0 +1,21 @@
+.green {
+    color: green;
+  }
+  
+.red {
+    color: red;
+}
+  
+.yellow {
+    color: yellow;
+}
+
+.loading-container {
+    margin: -200px auto;
+    padding: 60px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.25em;
+}
