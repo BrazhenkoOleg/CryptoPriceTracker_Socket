@@ -9,6 +9,7 @@ import { UserController, CoinInfoController } from './controllers/index.js';
 import UserModel from './models/User.js';
 import CoinInfoModel from './models/CoinInfo.js';
 import CryptoSocket from './utils/CryptoSocket.js';
+import sendEmail from './utils/SendEmail.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -45,6 +46,7 @@ const startServer = async () => {
                     clients.set(socket, { userId: user._id });
       
                     const coinInfo = await CoinInfoModel.findOne(); 
+                    const price = coinInfo ? coinInfo.priceCoin : 0;
                     
                     socket.send(JSON.stringify({ message: "Вход выполнен успешно!" }));
       

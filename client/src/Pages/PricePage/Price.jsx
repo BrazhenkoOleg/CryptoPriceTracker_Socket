@@ -3,7 +3,7 @@ import './stylesPrice.css';
 
 const Price = ({ user }) => {
     const [coinInfo, setCoinInfo] = useState(null);
-    const [priceColor, setPriceColor] = useState('yellow');
+    const [priceColor, setPriceColor] = useState('blue');
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const trackPrice = (currentPrice, previousPrice) => {
     } else if (currentPrice < previousPrice) {
         return 'red';
     } else {
-        return 'yellow';
+        return 'blue';
     }
 } 
 
